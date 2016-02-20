@@ -1,0 +1,32 @@
+{
+    "name": "frankingermann/limittopicsperuser",
+    "type": "phpbb-extension",
+    "description": "Limits the number of topics a user can start per forum and day/week/month.",
+    "homepage": "http://www.frankingermann.de",
+    "version": "0.9.0-beta1",
+    "keywords": [
+        "phpbb",
+        "extension",
+        "user",
+        "topics"
+    ],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Frank Ingermann",
+            "email": "info@frankingermann.de",
+            "homepage": "http://www.frankingermann.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "composer/installers": "~1.0"
+    },
+    "extra": {
+        "display-name": "Limit Topics Per User",
+        "soft-require": {
+            "phpbb/phpbb": "3.1"
+        }
+    }
+}

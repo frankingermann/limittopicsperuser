@@ -1,0 +1,22 @@
+services:
+    frankingermann.limittopicsperuser.listener:
+        class: frankingermann\limittopicsperuser\event\listener
+        arguments:
+            - @config
+            - @template
+            - @auth
+            - @user
+            - @dbal.conn
+            - @service_container
+        tags:
+            - { name: event.listener }
+            
+    frankingermann.limittopicsperuser.admin.controller:
+        class: frankingermann\limittopicsperuser\controller\admin_controller
+        arguments:
+            - @config
+            - @request
+            - @template
+            - @user
+            - @service_container
+                        

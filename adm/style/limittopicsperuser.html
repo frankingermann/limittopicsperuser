@@ -1,0 +1,93 @@
+<!-- INCLUDE overall_header.html -->
+
+<h1>{L_LIMIT_TOPICS_PER_USER_TITLE}</h1>
+<p>{L_LIMIT_TOPICS_PER_USER_EXPLAIN}</p>
+
+<form id="limittopicsperuser" method="post" action="{U_ACTION}">
+
+	<fieldset>
+		<legend>{L_LTPU_GLOBAL_SETTINGS}</legend>
+		<dl>
+			<dt><label for="ltpu_enable">{L_LTPU_ENABLE}{L_COLON}</label><br /><span>{L_LTPU_ENABLE_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="ltpu_enable" value="1" id="ltpu_enable"<!-- IF LTPU_ENABLE --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+			<label><input type="radio" class="radio" name="ltpu_enable" value="0" <!-- IF not LTPU_ENABLE --> checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_LTPU_SETTINGS_PER_DAY_TITLE}</legend>
+		<dl>
+			<dt><label for="ltpu_per_day_check">{L_LTPU_PER_DAY_CHECK}{L_COLON}</label><br /><span>{L_LTPU_PER_DAY_CHECK_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="ltpu_per_day_check" value="1" id="ltpu_per_day_check"<!-- IF LTPU_PER_DAY_CHECK --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+			<label><input type="radio" class="radio" name="ltpu_per_day_check" value="0" <!-- IF not LTPU_PER_DAY_CHECK --> checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="ltpu_per_day_settings">{L_LTPU_PER_DAY_SETTINGS}{L_COLON}</label><br /><span>{L_LTPU_PER_DAY_SETTINGS_EXPLAIN}</span></dt>
+			<dd><label><input type="text" size="100" name="ltpu_per_day_settings" id="ltpu_per_day_settings" value="{LTPU_PER_DAY_SETTINGS}"></label>
+			</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_LTPU_SETTINGS_PER_WEEK_TITLE}</legend>
+		<dl>
+			<dt><label for="ltpu_per_week_check">{L_LTPU_PER_WEEK_CHECK}{L_COLON}</label><br /><span>{L_LTPU_PER_WEEK_CHECK_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="ltpu_per_week_check" value="1" id="ltpu_per_week_check"<!-- IF LTPU_PER_WEEK_CHECK --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+			<label><input type="radio" class="radio" name="ltpu_per_week_check" value="0" <!-- IF not LTPU_PER_WEEK_CHECK --> checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="ltpu_per_week_settings">{L_LTPU_PER_WEEK_SETTINGS}{L_COLON}</label><br /><span>{L_LTPU_PER_WEEK_SETTINGS_EXPLAIN}</span></dt>
+			<dd><label><input type="text" size="100" name="ltpu_per_week_settings" id="ltpu_per_week_settings" value="{LTPU_PER_WEEK_SETTINGS}"></label>
+			</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_LTPU_SETTINGS_PER_MONTH_TITLE}</legend>
+		<dl>
+			<dt><label for="ltpu_per_month_check">{L_LTPU_PER_MONTH_CHECK}{L_COLON}</label><br /><span>{L_LTPU_PER_MONTH_CHECK_EXPLAIN}</span></dt>
+			<dd><label><input type="radio" class="radio" name="ltpu_per_month_check" value="1" id="ltpu_per_month_check"<!-- IF LTPU_PER_MONTH_CHECK --> checked="checked"<!-- ENDIF -->/> {L_YES}</label>
+			<label><input type="radio" class="radio" name="ltpu_per_month_check" value="0" <!-- IF not LTPU_PER_MONTH_CHECK --> checked="checked"<!-- ENDIF --> /> {L_NO}</label></dd>
+		</dl>
+		<dl>
+			<dt><label for="ltpu_per_month_settings">{L_LTPU_PER_MONTH_SETTINGS}{L_COLON}</label><br /><span>{L_LTPU_PER_MONTH_SETTINGS_EXPLAIN}</span></dt>
+			<dd><label><input type="text" size="100" name="ltpu_per_month_settings" id="ltpu_per_month_settings" value="{LTPU_PER_MONTH_SETTINGS}"></label>
+			</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_LTPU_FORUM_SETTINGS_EXPLAINED}</legend>
+		<p>{L_LTPU_FORUM_SETTINGS_EXPLAINED_TEXT}</p>
+	</fieldset>
+  
+	<fieldset>
+		<legend>{L_LTPU_INCLUDED_GROUPS_TITLE}</legend>
+		<dl>
+			<dt><label for="ltpu_included_group_ids">{L_LTPU_INCLUDED_GROUPS}{L_COLON}</label><br /><span>{L_LTPU_INCLUDED_GROUPS_EXPLAIN}<br />{L_LTPU_INCLUDED_GROUP_IDS_EXPLAIN}</span></dt>
+			<dd><label><input type="text" size="100" name="ltpu_included_group_ids" id="ltpu_included_group_ids" value="{LTPU_INCLUDED_GROUP_IDS}">
+			</label>
+			</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_LTPU_EXCLUDED_RANKS_TITLE}</legend>
+		<dl>
+			<dt><label for="ltpu_excluded_rank_ids">{L_LTPU_EXCLUDED_RANKS}{L_COLON}</label><br /><span>{L_LTPU_EXCLUDED_RANKS_EXPLAIN}</span></dt>
+			<dd><label><input type="text" size="100" name="ltpu_excluded_rank_ids" id="ltpu_excluded_rank_ids" value="{LTPU_EXCLUDED_RANK_IDS}"></label>
+			</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset>
+		<legend>{L_ACP_SUBMIT_CHANGES}</legend>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
+			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+		</p>
+		{S_FORM_TOKEN}
+	</fieldset>
+</form>
+
+<!-- INCLUDE overall_footer.html -->
